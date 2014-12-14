@@ -5,8 +5,6 @@ import java.net.URL;
 
 
 /**
- * 
- *
  * @author ngvtien
  * @version $Revision:  $
  */
@@ -17,7 +15,6 @@ public class CrawlerUrl {
     private boolean isAllowedToVisit;
     private boolean isCheckedForPermission = false;
     private boolean isVisited = false;
-
 
     /**
      * Constructor
@@ -103,7 +100,6 @@ public class CrawlerUrl {
 
     /**
      * Method description
-     *
      */
     public void setIsVisited() {
         this.isVisited = true;

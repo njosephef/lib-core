@@ -5,22 +5,18 @@ import com.smarket.npl.impl.WordDetector;
 
 
 /**
- * 
- *
  * @author ngvtien
  * @version $Revision:  $
  */
 public class ParseHTMLWithTika {
     /**
-    * Method description
-    *
-    * @param args
-    * @throws Exception
-    */
-    public static void main(String args[]) throws Exception
-    {
-        try
-        {
+     * Method description
+     *
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String args[]) throws Exception {
+        try {
 
             //         is = new FileInputStream("C:/Temp/java-x.html");
             // convert String into InputStream
@@ -30,20 +26,16 @@ public class ParseHTMLWithTika {
             DocumentFormatConverter documentFormatConverter = DocumentFormatConverter.getInstance();
             TEXTContent plainContent = documentFormatConverter.convert(content);
 
-            //            System.out.println("============ " + plainContent.getBody());
+            System.out.println("============ " + plainContent.getBody());
 
-            SentenceDetector sentenceDetector = new SentenceDetector();
+//            SentenceDetector sentenceDetector = new SentenceDetector();
             //            sentenceDetector.detectSentence(plainContent.getBody());
 
-            WordDetector wordDetector = new WordDetector();
-            wordDetector.tokenize(plainContent.getBody());
-        }
-        catch (Exception e)
-        {
+//            WordDetector wordDetector = new WordDetector();
+//            wordDetector.tokenize(plainContent.getBody());
+        } catch (Exception e) {
             e.printStackTrace();
-        }
-        finally
-        {
+        } finally {
 
         }
     }

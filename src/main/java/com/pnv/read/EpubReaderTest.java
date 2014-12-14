@@ -1,8 +1,8 @@
 /*
  * EpubReader.java
  *
- * Copyright by Orell Füssli Wirtschaftsinformationen AG
- * Zürich
+ * Copyright by Orell Fï¿½ssli Wirtschaftsinformationen AG
+ * Zï¿½rich
  * All rights reserved.
  */
 package com.pnv.read;
@@ -23,7 +23,6 @@ import com.pnv.webcrawler.DocumentFormatConverter;
 import com.pnv.webcrawler.HTMLContent;
 import com.pnv.webcrawler.TEXTContent;
 import com.smarket.npl.impl.SentenceDetector;
-
 
 
 /**

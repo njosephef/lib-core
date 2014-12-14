@@ -1,8 +1,8 @@
 /*
  * BoilerpoipeTest.java
  *
- * Copyright by Orell Füssli Wirtschaftsinformationen AG
- * Zürich
+ * Copyright by Orell Fï¿½ssli Wirtschaftsinformationen AG
+ * Zï¿½rich
  * All rights reserved.
  */
 package com.pnv.webcrawler;
@@ -15,40 +15,30 @@ import de.l3s.boilerpipe.extractors.DefaultExtractor;
 
 
 /**
- * 
- *
  * @author ngvtien
  * @version $Revision:  $
  */
-public class BoilerpoipeTest
-{
+public class BoilerpoipeTest {
 
     /**
      * Method description
      *
      * @param args
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         URL url = null;
-        try
-        {
+        try {
             url = new URL("http://techcrunch.com/2014/05/26/on-the-set-of-hbos-silicon-valley/");
             System.out.println(url.toString());
 
-        }
-        catch (MalformedURLException e)
-        {
+        } catch (MalformedURLException e) {
             //            log.warn("Error occurred: " + e.getMessage(), e);
         }
 
         // This can also be done in one line:
-        try
-        {
+        try {
             System.out.println(DefaultExtractor.INSTANCE.getText(url));
-        }
-        catch (BoilerpipeProcessingException e)
-        {
+        } catch (BoilerpipeProcessingException e) {
             //            log.warn("Error occurred: " + e.getMessage(), e);
         }
     }

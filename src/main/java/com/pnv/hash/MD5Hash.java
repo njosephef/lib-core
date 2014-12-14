@@ -7,7 +7,6 @@ public class MD5Hash
 {
     MessageDigest instance;
 
-
     public MD5Hash()
     {
         try
@@ -18,7 +17,6 @@ public class MD5Hash
         {
         }
     }
-
 
     long hash(String key)
     {
