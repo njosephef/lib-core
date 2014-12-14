@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+        
+        <!-- Database connection settings, Connect to HSQL, IN Memory  -->
+        <!-- <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+	    <property name="connection.url">jdbc:hsqldb:file:test</property>
+	    <property name="connection.username">sa</property>
+	    <property name="connection.password"></property>  -->
+        
+        <!-- Database connection settings, Connect to MySQL  -->
+	    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pnv</property>
+	    <property name="hibernate.connection.username">root</property>
+	    <property name="hibernate.connection.password">abc123</property>
+        
+        <!-- Database connection settings, Connect to Postgres  -->
+        <!-- 
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernatedb</property> 
+        -->
+        
+        <!-- Database connection settings, Connect to MS SQL  -->
+        <!-- <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=pnv</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">123456789</property> -->
+                
+        <!-- SQL dialect -->
+        
+        <!-- <property name="dialect">org.hibernate.dialect.HSQLDialect</property>  -->
+       
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- 
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> 
+        -->
+        
+        <!-- <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property> -->
+  
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+        
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        
+        <property name="hbm2ddl.auto">create</property>
+ 
+ 		<!-- <mapping class="com.pnv.demo.Employee"/>
+ 		<mapping class="com.pnv.demo.User"/>
+ 		<mapping class="com.pnv.demo.Address"/> -->
+ 		<!-- <mapping class="com.pnv.domain.Address"/>
+ 		<mapping class="com.pnv.domain.ProductOrder"/>
+ 		
+ 		<mapping class="com.pnv.domain.Billing"/>
+ 		<mapping class="com.pnv.domain.Account"/> -->
+ 		
+ 		<mapping class="com.pnv.domain.Shipment"/>
+ 		<mapping class="com.pnv.domain.Item"/>
+ 		
+ 		<!-- <mapping class="com.pnv.domain.Customer"/>
+ 		
+ 		<mapping class="com.pnv.domain.Department"/>
+ 		<mapping class="com.pnv.domain.Employee"/> -->
+ 		
+ 		 
+    </session-factory>
+</hibernate-configuration>

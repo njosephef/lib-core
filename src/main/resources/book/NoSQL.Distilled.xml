@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book>
+    <title></title>
+    <content>
+        <chapter number="1" title="Key-Value Databases">
+            <session>
+                8.3.1. Storing Session Information
+                Generally, every web session is unique and is assigned a unique sessionid value. 
+                Applications that store the sessionid on disk or in an RDBMS will greatly benefit 
+                from moving to a key-value store, since everything about the session can be stored 
+                by a single PUT request or retrieved using GET. This single-request operation makes 
+                it very fast, as everything about the session is stored in a single object. 
+                Solutions such as Memcached are used by many web applications, and Riak can be used 
+                when availability is important.
+            </session>
+            <session>
+                8.3.2. User Profiles, Preferences
+                Almost every user has a unique userId, username, or some other attribute, 
+                as well as preferences such as language, color, timezone, which products the
+            </session>
+        </chapter>
+        <chapter number="2">
+        
+        </chapter>
+    </content>
+</book>
